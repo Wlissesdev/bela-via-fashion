@@ -1,73 +1,111 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# Bela Via Fashion
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Base de e-commerce de moda construída com React, Vite e shadcn/ui**
 
-## How can I edit this code?
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
+[![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-blue.svg)](./LICENSE)
 
-There are several ways of editing your application.
+</div>
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 📖 Sobre
 
-Changes made via Lovable will be committed automatically to this repo.
+O **Bela Via Fashion** é um projeto de vitrine/loja de moda para a web. O objetivo do domínio é oferecer um e-commerce de vestuário com identidade visual própria, navegação entre produtos e um sistema de design consistente — atendendo a consumidores que buscam peças de moda em uma experiência de compra moderna e responsiva.
 
-**Use your preferred IDE**
+O repositório encontra-se em **estágio inicial de desenvolvimento**: ele parte de um scaffold de aplicação SPA já configurado, contendo todo o sistema de design (tokens de cor em HSL com tema claro e escuro), a biblioteca completa de componentes **shadcn/ui** e a base de roteamento. A página inicial (`Index`) ainda renderiza um conteúdo de exemplo, servindo de ponto de partida para a construção das telas reais da loja.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Esta base foi montada para acelerar a construção da interface do e-commerce, fornecendo componentes de UI prontos (formulários, diálogos, tabelas, abas, carrosséis, gráficos, notificações e mais) e integração preparada com gerenciamento de estado assíncrono, de modo que o foco do desenvolvimento fique na regra de negócio da moda.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Por se tratar de um scaffold, ainda não há fluxos de catálogo, carrinho ou checkout implementados no código atual.
 
-Follow these steps:
+## ✨ Funcionalidades
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Sistema de design** com variáveis CSS em HSL e suporte a **tema claro e escuro** (`darkMode: ["class"]`, definidas em `src/index.css`).
+- **Biblioteca completa de componentes shadcn/ui** em `src/components/ui` (accordion, alert, avatar, badge, breadcrumb, button, calendar, card, carousel, chart, checkbox, command, dialog, drawer, dropdown-menu, form, input, menu de navegação, paginação, popover, progress, select, sheet, sidebar, skeleton, slider, switch, table, tabs, toast, tooltip, entre outros).
+- **Roteamento com React Router** e rota curinga (`*`) que direciona para a página **NotFound**.
+- **Provisionamento global** de `QueryClientProvider` (TanStack React Query), `TooltipProvider` e dois sistemas de notificação (`Toaster` e `Sonner`) em `src/App.tsx`.
+- **Utilitário `cn`** (`src/lib/utils.ts`) para composição de classes com `clsx` e `tailwind-merge`.
+- **Hooks utilitários** `use-mobile` (detecção de viewport) e `use-toast`.
+- **Ferramentas de formulário e validação** disponíveis no projeto (React Hook Form, `@hookform/resolvers` e Zod) e **gráficos** com Recharts.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠️ Tecnologias
 
-# Step 3: Install the necessary dependencies.
-npm i
+<p>
+<img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white" alt="React" />
+<img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white" alt="Vite" />
+<img src="https://img.shields.io/badge/Tailwind%20CSS-3-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+<img src="https://img.shields.io/badge/shadcn%2Fui-000000?logo=shadcnui&logoColor=white" alt="shadcn/ui" />
+<img src="https://img.shields.io/badge/React%20Router-6-CA4245?logo=reactrouter&logoColor=white" alt="React Router" />
+<img src="https://img.shields.io/badge/TanStack%20Query-5-FF4154?logo=reactquery&logoColor=white" alt="TanStack Query" />
+<img src="https://img.shields.io/badge/Zod-3-3E67B1?logo=zod&logoColor=white" alt="Zod" />
+</p>
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- **React 18** + **TypeScript** + **Vite**
+- **shadcn/ui** (componentes baseados em Radix UI) e **Tailwind CSS** + `tailwindcss-animate`
+- **React Router DOM**, **TanStack React Query**
+- **React Hook Form** + **Zod**, **Recharts**
+- **lucide-react** (ícones), **sonner** e **vaul** (drawer)
+- **next-themes** (temas claro/escuro)
+
+## 📁 Estrutura do projeto
+
+```
+bela-via-fashion/
+├── public/
+│   ├── favicon.ico
+│   ├── placeholder.svg
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── ui/                  # Biblioteca de componentes shadcn/ui
+│   │   └── NavLink.tsx
+│   ├── hooks/
+│   │   ├── use-mobile.tsx
+│   │   └── use-toast.ts
+│   ├── lib/utils.ts             # Utilitário cn (clsx + tailwind-merge)
+│   ├── pages/
+│   │   ├── Index.tsx            # Página inicial (conteúdo de exemplo)
+│   │   └── NotFound.tsx         # Página 404
+│   ├── App.tsx                  # Provedores globais e rotas
+│   ├── index.css                # Tokens de design (HSL) e tema claro/escuro
+│   └── main.tsx
+├── index.html
+├── components.json              # Configuração do shadcn/ui
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## 🚀 Como rodar localmente
+
+Pré-requisitos: **Node.js** e **npm**.
+
+```bash
+# 1. Instalar as dependências
+npm install
+
+# 2. Iniciar o servidor de desenvolvimento (http://localhost:8080)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Scripts disponíveis:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run dev        # Servidor de desenvolvimento
+npm run build      # Build de produção
+npm run preview    # Pré-visualização do build
+npm run lint       # Análise estática com ESLint
+```
 
-**Use GitHub Codespaces**
+## 📄 Licença
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Distribuído sob a **Licença MIT**. Veja [`LICENSE`](./LICENSE).
