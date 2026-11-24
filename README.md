@@ -19,11 +19,11 @@
 
 O **Bela Via Fashion** é um projeto de vitrine/loja de moda para a web. O objetivo do domínio é oferecer um e-commerce de vestuário com identidade visual própria, navegação entre produtos e um sistema de design consistente — atendendo a consumidores que buscam peças de moda em uma experiência de compra moderna e responsiva.
 
-O repositório encontra-se em **estágio inicial de desenvolvimento**: ele parte de um scaffold de aplicação SPA já configurado, contendo todo o sistema de design (tokens de cor em HSL com tema claro e escuro), a biblioteca completa de componentes **shadcn/ui** e a base de roteamento. A página inicial (`Index`) ainda renderiza um conteúdo de exemplo, servindo de ponto de partida para a construção das telas reais da loja.
+O projeto entrega uma **base sólida de design system** pronta para crescer: tokens de cor em HSL (tema claro e escuro), a biblioteca completa de componentes **shadcn/ui**, roteamento e layout responsivo. A página inicial funciona como **vitrine viva** desse sistema de design — [veja ao vivo](https://bela-via-fashion.vercel.app).
 
-Esta base foi montada para acelerar a construção da interface do e-commerce, fornecendo componentes de UI prontos (formulários, diálogos, tabelas, abas, carrosséis, gráficos, notificações e mais) e integração preparada com gerenciamento de estado assíncrono, de modo que o foco do desenvolvimento fique na regra de negócio da moda.
+A base foi montada para acelerar a interface do e-commerce, fornecendo componentes de UI prontos (formulários, diálogos, tabelas, abas, carrosséis, gráficos, notificações e mais) e integração preparada com gerenciamento de estado assíncrono, de modo que o foco fique na regra de negócio da moda.
 
-Por se tratar de um scaffold, ainda não há fluxos de catálogo, carrinho ou checkout implementados no código atual.
+**Próximos passos:** fluxos de catálogo, carrinho e checkout.
 
 ## ✨ Funcionalidades
 
